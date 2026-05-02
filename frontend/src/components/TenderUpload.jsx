@@ -19,7 +19,7 @@ const TenderUpload = () => {
     formData.append('document', file);
 
     try {
-      await axios.post('http://localhost:5000/api/tender/upload', formData);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/tender/upload`, formData);
       toast.success('Tender uploaded and analyzed successfully!');
       setFile(null);
       setTimeout(() => window.location.href = '/', 1500);

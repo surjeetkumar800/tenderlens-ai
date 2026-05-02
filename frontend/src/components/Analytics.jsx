@@ -10,7 +10,7 @@ const Analytics = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/analytics')
+    axios.get(`${import.meta.env.VITE_API_URL}/api/analytics`)
       .then(res => {
         setData(res.data);
         setLoading(false);

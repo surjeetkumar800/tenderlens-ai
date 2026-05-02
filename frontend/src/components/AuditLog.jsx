@@ -7,7 +7,7 @@ const AuditLog = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/audit')
+    axios.get(`${import.meta.env.VITE_API_URL}/api/audit`)
       .then(res => {
         if(Array.isArray(res.data)) setLogs(res.data);
         else setLogs([]);

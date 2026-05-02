@@ -19,7 +19,7 @@ const BidderEvaluation = () => {
   const [error, setError] = useState(null);
 
   const fetchBidders = () => {
-    axios.get(`http://localhost:5000/api/bidders/${id}`)
+    axios.get(`${import.meta.env.VITE_API_URL}/api/bidders/${id}`)
       .then(res => {
         if (!Array.isArray(res.data)) {
           setBidders([]);
@@ -65,7 +65,7 @@ const BidderEvaluation = () => {
 
     try {
       setTimeout(async () => {
-        await axios.post('http://localhost:5000/api/bidder/upload', formData);
+        await axios.post(`${import.meta.env.VITE_API_URL}/api/bidder/upload`, formData);
         setUploading(false);
         setBidderName('');
         setFiles(null);
@@ -87,7 +87,7 @@ const BidderEvaluation = () => {
     
     setOverriding(true);
     try {
-      await axios.post('http://localhost:5000/api/bidder/override', {
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/bidder/override`, {
         bidderId,
         criterionId,
         newStatus,

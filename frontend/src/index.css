@@ -1,31 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* === Self-Hosted Figtree Font === */
-@font-face {
-    font-family: "Figtree";
-    src: url("/fonts/Figtree-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: "Figtree";
-    src: url("/fonts/Figtree-SemiBold.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Figtree";
-    src: url("/fonts/Figtree-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
 
 :root {
     /* Light theme colors - Blue and Orange Finance Palette */
@@ -943,13 +921,6 @@ label {
     }
 }
 
-/* Fonts */
-@font-face {
-    font-family: "Figtree";
-    src: url("/fonts/Figtree-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-display: swap;
-}
 
 /* variables */
 :root {

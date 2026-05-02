@@ -8,7 +8,7 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/tenders')
+    axios.get(`${import.meta.env.VITE_API_URL}/api/tenders`)
       .then(res => {
         setTenders(res.data);
         setLoading(false);
